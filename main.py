@@ -27,6 +27,7 @@ print(f"R-squared score: {r2}")
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error: {mse}")
 
+
 # Plotting actual vs predicted values
 plt.scatter(X_test, y_test, color='blue', label='Actual')
 plt.plot(X_test, y_pred, color='red', label='Predicted')
@@ -34,4 +35,11 @@ plt.title('Actual vs Predicted')
 plt.xlabel('X')
 plt.ylabel('y')
 plt.legend()
-plt.show()
+
+# Save the plot to an image file (e.g., PNG)
+output_file = 'predicted_vs_actual.png'  
+plt.savefig(output_file)
+
+# Display the plot
+#plt.show()
+
