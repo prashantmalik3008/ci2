@@ -40,6 +40,6 @@ plt.legend()
 output_file = 'predicted_vs_actual.png'  
 plt.savefig(output_file)
 
-# Display the plot
+#Display the plot
 #plt.show()
 
