@@ -34,3 +34,14 @@ jobs:
       - name: Run Tests
         run: |
           python -m unittest discover
+
+      - name: Create CML report
+      env:
+        REPO_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+      run: |
+
+        python main.py > results.txt
+        echo "---" >> report.md
+        cat results.txt >> report.md
+
+        cml comment create report.md
